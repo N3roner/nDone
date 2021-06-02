@@ -8,28 +8,39 @@ function dogToDoc(inDog) {
 }
 
 export class Dogadjaji extends Component {
+    
     static displayName = "dogadjaji";
 
     constructor(props) {
-        // console.log("dogs CONS")
         super(props);
         this.state = { dogadjaji:[], loading: true };
 
-        fetch('/Dogadjaji')
-            .then(response => response.json())
-            .then(data => {
-                this.setState({
-                    dogadjaji: data,
-                    loading: false
-                })
-            });
+       
 
+           async function componentDidMount() {
+                console.log('dog mounted');
+        
+                try {
+                    console.log('trying');
+                    const response = await fetch('/Dogadjaji')
+                    .then(response => response.json())
+                    .then(data => {
+                        this.setState({
+                            dogadjaji: data,
+                            loading: false
+                        })
+                    });
+
+                }catch (error) {
+                    console.log(error);
+                  }
+               
+              }
             
     }
 
     static renderDogs(passedDogs){
         for (let index = 0; index < passedDogs.length; index++) {
-            // console.log(passedDogs[index]);
             let tmpD = passedDogs[index];
         }
     }
@@ -56,10 +67,6 @@ export class Dogadjaji extends Component {
         ? <p><em>Loadin data...</em></p>
         : Dogadjaji.renderDogs(this.state.dogadjaji);
 
-        // let dogsLoaded = this.state.loading
-        // ? '' : 
-        // Dogadjaji.ispisiIh(this.state.dogadjaji);
-        
         let dogsLoaded = this.state.loading
         ? <p><em>Loadin data...</em></p>
         : Dogadjaji.ispisiIh(this.state.dogadjaji);
