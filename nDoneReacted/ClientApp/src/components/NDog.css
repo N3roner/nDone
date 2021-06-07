@@ -1,4 +1,179 @@
-.dogadjajNaziv { 
-    color: dodgerblue;
-    background-color: green;
+:root {
+    --kupiButton: seagreen;
+    --mainColor: #0e1c42;
+}
+
+
+.dogGroup {
+    display: inline-block;
+}
+
+.dogCard {
+    background-color: #393b45;
+    position: relative;
+    /* display: inline-block; */
+    color: white;
+    width: 16%;
+    float: left;
+    margin: 0.3%;
+    margin-bottom: 1.2%;
+    text-decoration: none;
+    border-radius: 0.4em;
+    border-top: 3px solid white;
+    height: 27em;
+    box-shadow: -5px 3px 10px #888888;
+}
+
+.dogCardFullView {
+    background-color: #393b45;    
+    position: relative;
+    /* display: inline-block; */
+    color: white;
+    width: 40%;  
+    float: left;  
+    margin: 0.3%;
+    margin-bottom: 1.2%;
+    text-decoration: none;
+    border-radius: 0.4em;  
+    height: 35em;    
+}
+/* 
+a.dogCard {
+    position: relative;
+    display: inline-block;
+    text-decoration: none !important;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+    a.dogCard:hover {
+        border: initial;
+        color: white;
+        border-radius: 0.6em;
+        box-shadow: 0 0 10px #2196f3, 0 0 30px #2196f3, 0 0 50px #2196f3;
+        transition-delay: 1s;
+    }
+
+a span {
+    position: absolute;
+    display: block;
+}
+
+    a span:nth-child(1) {
+        top: 0%;
+        left: -100%;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(90deg,transparent,#2196f3);
+    }
+
+a:hover span:nth-child(1) {
+    left: 20%;
+    transition: 0.25s;
+}
+
+a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(270deg,transparent,#2196f3);
+}
+
+a:hover span:nth-child(3) {
+    right: 20%;
+    transition: 0.25s;
+    transition-delay: 0.50s;
+}
+
+a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#2196f3);
+}
+
+a:hover span:nth-child(2) {
+    top: 40%;
+    transition: 0.25s;
+    transition-delay: 0.25s;
+}
+
+a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#2196f3);
+}
+
+a:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 0.25s;
+    transition-delay: 0.75s;
+} */
+
+.dogSideInfo {
+    position: absolute;
+    right: -5%;
+    display: none;
+    width: 14.6%;
+    top: 0;
+    height: 20em;
+    margin: 1%;
+    border: 3px solid black;
+}
+
+.dogInfo {
+    text-align: center;
+    font-family: Consolas;
+}
+
+.dogTittle {
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0.4em;
+}
+
+img.dogImg {
+    object-fit: cover;
+    position: relative;
+    top: 2%;
+    left: 2%;
+    width: 96%;
+    height: 40%;
+    border-radius: 0.4em;
+}
+
+.dogBot {
+    position: absolute;
+    display: block;
+    display: block !important;
+    bottom: 2%;
+    left: 2%;
+}
+
+.dogKupi {
+    position: absolute;
+    padding: 0.5em 1em;
+    bottom: 2%;
+    right: 2%;
+    color: white;
+    background-color: var(--kupiButton);
+    border-radius: 0.4em;
+}
+
+
+.dogDostupno {
+    position: absolute;
+    padding: 0.5em 1em;
+    bottom: 2%;
+    left: 2%;
+    background-color: dodgerblue;
+    border-radius: 0.4em;
+    font-weight: bold;
+    border-bottom-left-radius: 20% 20%;
+    border-bottom-right-radius: 50% 20%;
 }

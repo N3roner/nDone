@@ -24,7 +24,7 @@ namespace nDoneReacted.Controllers
              return View(await _context.Dogadjaji.ToListAsync());
           }*/
       
-      [HttpGet("action"), Route("Dogadjaji")]
+      [HttpGet("action"), Route("/API/Dogadjaji")]
       public async Task<JsonResult> Index(){
 
          var dogs =  await _context.Dogadjaji.ToListAsync();
