@@ -1,0 +1,64 @@
+.myMainMenu{
+  display: block;
+  list-style: none;
+  height: 25px;
+}
+
+.myMainMenu ul {  
+  margin: 0;
+  padding-left: 0;
+  background: #555555;
+}
+
+.myMainMenu li {
+  display: block;
+  float: left;
+  position: relative;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+  
+.myMainMenu button {  
+  width: max-content;  
+  background: none;
+  border: none;
+  color: white;
+}
+
+.myMainMenu button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  /* background-color: #555555; */
+  background: #555555;
+}
+
+.myMainMenu ul li ul {  
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+  left: 0;
+  display: none;
+}
+
+.myMainMenu ul li:hover > ul,
+.myMainMenu ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+} 
+
+.myMainMenu li ul li {
+  clear: both;
+  width: 100%;
+}
+
+.nEditorSettingsPanel {
+
+}
+
+.nEditorSettingsPanel ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0 0 10px;
+}

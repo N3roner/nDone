@@ -1,0 +1,460 @@
+:root {
+    /* --mainColor: #0e1c42; */
+    /* --mainColor: #1b3069; */
+    --usualBorderRad: 0.4em;
+    --mainColor: #0e1c42;
+    --firstLeftCard: translatex(-30%) scale(.8);
+    --secondLeftCard: translatex(-65%) scale(.6);
+    --firstRightCard: translatex(30%) scale(.8);
+    --secondRightCard: translatex(65%) scale(.6);
+    --firstToLeft: translatex(-30%) scale(.8);
+    /* , opacity: .8, z-index: 9; */
+
+}
+
+html, body {
+    background-color: #2f3038;
+    font-family: 'comic sans ms', Helvetica, arial, sans-serif;
+}
+
+
+.centerContainer{
+    position: relative;
+
+    width: 80%;
+    left: 10%;
+    top: 15%;
+    display: block;
+    background-color: pink;
+}
+
+
+.card-group {
+    border: 0.3em solid var(--mainColor);
+    border-radius: 1em !important;
+    padding: 1em;
+    /* padding-top: 1em !important;
+    padding-bottom: 1em !important; */
+}
+
+.card-img-top {
+    align-self: center;
+    padding-top: 5%;
+    width: 90%;
+    height: 40%;
+}
+
+.card-text-footer {
+    border-top: black;
+    border-top: solid 1px;
+    position: absolute;
+    bottom: 0;
+}
+
+.linear-gradientExGreen {
+    background: linear-gradient(0deg, rgba(26, 19, 135, 1) 0%, rgba(168, 226, 15, 1) 51%, rgba(0, 255, 51, 1) 100%);
+}
+
+a:hover {
+    color: greenyellow !important;
+}
+
+
+.navBar {
+    position: sticky;
+    width: 90%;
+    top: 0;
+    left: 5%;
+
+    /*display: inline-block;
+    position: fixed;
+    top: 0;
+    left: 5%;
+    height: 4em;
+    width: 90%;*/
+    background-color: var(--mainColor);
+    border-radius: 0 0 1em 1em !important;
+/*    z-index: 90000;*/
+}
+
+
+
+.botBorderRad {
+    height: 10%;
+    background-color: var(--mainColor);
+    border-radius: 1em 1em 0 0 !important;
+}
+
+.card {
+    margin: 1em;
+    border: 0.2em solid var(--mainColor);
+    border-radius: 1em !important;
+}
+
+/* position: fixed;
+  top: 0%;
+  left: 5%;
+  width: 90%;
+  height: 2.5em;
+  background-color: var(--mainColor);
+  border-radius: 0 0 1em 1em !important;
+  z-index: 9000;
+  box-shadow: -5px 3px 10px #888888; */
+
+
+#mainContainer {
+    position: fixed;
+    top: 3em;
+    left: 5%;
+    width: 90%;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.problemCard {
+    position: relative;
+    text-align: center;
+    width: 60%;
+    left: 20%;
+    font-size: x-large;
+}
+
+.rjesenjeCard {
+    position: relative;
+    text-align: center;
+    width: 80%;
+    left: 10%;
+    font-size: x-large;
+}
+
+.tables {
+    overflow-x: auto;
+}
+
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: auto;
+}
+
+.myCardsGroup {
+    text-align: center;
+    /* align-items: center; */
+    margin-left: auto;
+    margin-right: auto;
+    /* display: inline-block; */
+    
+    width: 95%;
+}
+
+.myCard {
+    background-color: white;
+    position: relative;
+    width: 35%;
+    display: inline-block;
+    margin-left: 5em;
+    margin-right: 5em;
+    margin: 1em;
+    text-align: center;
+    border: 0.3em solid var(--mainColor);
+    border-radius: 1em;
+    transition: all 1s ease-in-out, right 1s ease-in-out, z-index 1s ease-in-out;
+
+    /* transition: width 1s ease-in-out, border 2s ease-in-out; */
+}
+
+/*.someGradient {
+    display: inline-block;
+    background: #00416A;*/
+    /* fallback for old browsers */
+    /*background: -webkit-linear-gradient(to bottom, #E4E5E6, #00416A);*/
+    /* Chrome 10-25, Safari 5.1-6 */
+    /*background: linear-gradient(to bottom, #E4E5E6, #00416A);*/
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/*}*/
+
+/* .myCard:hover {
+    transform: scale(1.2);
+    background-color: var(--mainColor);
+    color: white;
+    right: -15%;
+    z-index: 8000;
+    cursor: pointer;
+} */
+
+.myCardRjesenje {
+    position: relative;
+    width: 55%;
+    display: inline-block;
+    margin-left: 5em;
+    margin-right: 5em;
+    margin: 1em;
+    text-align: center;
+    border: 0.3em solid var(--mainColor);
+    border-radius: 1em;
+    transition: all 1s ease-in-out, left 1s ease-in-out;
+    background-color: white;
+}
+
+    /* .myCardRjesenje:hover {
+        transform: scale(1.2);
+        background-color: var(--mainColor);
+        color: white;
+        left: -15%;
+        cursor: pointer;
+    } */
+
+.myCard-righCont {
+    border: 0.3em solid var(--mainColor);
+    position: relative;
+    display: block;
+    top: -6em;
+    left: 110%;
+}
+
+img.myCardImg {
+    width: 90%;
+    height: 90%;
+    object-fit: scale-down;
+    margin-bottom: 1em;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+.cardCarousel {
+    position: absolute;
+    /* width: 80%;
+  height: 100%; */
+    left: 0;
+    right: 0;
+    margin: auto;
+    /* box-shadow: 0 50px 60px 0 rgba(0, 0, 0, 0.5), inset 0 -1px 2px 0 rgba(0, 0, 0, 0.3); */
+    -webkit-transition: transform 700ms cubic-bezier(0.7, -0.9, 0.3, 0.99);
+    -moz-transition: transform 700ms cubic-bezier(0.7, -0.9, 0.3, 0.99);
+    transition: transform 700ms cubic-bezier(0.7, -0.9, 0.3, 0.99);
+    /* transition: transform 5s ease; */
+    cursor: pointer;
+    overflow: unset;
+}
+
+.containerCarousel {
+    position: relative;
+    left: 20%;
+    width: 100%;
+    height: 100%;
+    max-width: 60%;
+    max-height: 40%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* max-width: 40rem;
+  max-height: 40rem; */
+    /* transform-style: preserve-3d; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+}
+
+.cards {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    margin-bottom: 20px;
+    /* margin-left: auto;
+  margin-right: auto; */
+}
+
+/* img {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--usualBorderRad);
+    object-fit: cover;
+} */
+
+.cardDetails {
+    position: relative;
+    text-align: center;
+    font-size: x-large;
+    top: 0;
+    /* opacity: 0.5; */
+    /* transition: top 3s linear; */
+    /* -webkit-transition:bottom 5s ease;
+  -moz-transition:bottom 5s ease;
+   -ms-transition:bottom 5s ease;
+    -o-transition:bottom 5s ease; */
+}
+
+/* 
+.cardDetails::after {
+  top: 100%;
+  background-color: white;
+} */
+
+.cardTitle {
+    position: relative;
+    text-align: center;
+}
+
+.cardInfo {
+    position: relative;
+    font-size: xx-large;
+    top: 1em;
+    display: none;
+}
+
+#item-1:checked ~ .cards #song-1 {
+    content: none;
+    transform: scale(1);
+    opacity: 1;
+    z-index: 10;
+}
+
+#item-1:checked ~ .cards #song-2 {
+    transform: var(--firstLeftCard);
+    opacity: .8;
+    z-index: 9;
+}
+
+#item-1:checked ~ .cards #song-3 {
+    transform: var(--secondLeftCard);
+    opacity: .6;
+    z-index: 8;
+}
+
+#item-1:checked ~ .cards #song-5 {
+    transform: var(--firstRightCard);
+    opacity: .8;
+    z-index: 9;
+}
+
+#item-1:checked ~ .cards #song-4 {
+    transform: var(--secondRightCard);
+    opacity: .6;
+    z-index: 8;
+}
+
+#item-2:checked ~ .cards #song-2 {
+    transform: scale(1);
+    opacity: 1;
+    z-index: 10;
+}
+
+#item-2:checked ~ .cards #song-3 {
+    transform: var(--firstLeftCard);
+    opacity: .8;
+    z-index: 9;
+}
+
+#item-2:checked ~ .cards #song-4 {
+    transform: var(--secondLeftCard);
+    opacity: .6;
+    z-index: 8;
+}
+
+#item-2:checked ~ .cards #song-1 {
+    transform: var(--firstRightCard);
+    opacity: .8;
+    z-index: 9;
+}
+
+#item-2:checked ~ .cards #song-5 {
+    transform: var(--secondRightCard);
+    opacity: .6;
+    z-index: 8;
+}
+
+#item-3:checked ~ .cards #song-3 {
+    transform: scale(1);
+    opacity: 1;
+    z-index: 10;
+}
+
+#item-3:checked ~ .cards #song-4 {
+    transform: var(--firstLeftCard);
+    opacity: .8;
+    z-index: 9;
+}
+
+#item-3:checked ~ .cards #song-5 {
+    transform: var(--secondLeftCard);
+    opacity: .6;
+    z-index: 8;
+}
+
+#item-3:checked ~ .cards #song-2 {
+    transform: var(--firstRightCard);
+    opacity: .8;
+    z-index: 9;
+}
+
+#item-3:checked ~ .cards #song-1 {
+    transform: var(--secondRightCard);
+    opacity: .6;
+    z-index: 8;
+}
+
+#item-4:checked ~ .cards #song-4 {
+    transform: scale(1);
+    opacity: 1;
+    z-index: 10;
+}
+
+#item-4:checked ~ .cards #song-5 {
+    transform: var(--firstLeftCard);
+    opacity: .8;
+    z-index: 9;
+}
+
+#item-4:checked ~ .cards #song-1 {
+    transform: var(--secondLeftCard);
+    opacity: .6;
+    z-index: 8;
+}
+
+#item-4:checked ~ .cards #song-3 {
+    transform: var(--firstRightCard);
+    opacity: .8;
+    z-index: 9;
+}
+
+#item-4:checked ~ .cards #song-2 {
+    transform: var(--secondRightCard);
+    opacity: .6;
+    z-index: 8;
+}
+
+#item-5:checked ~ .cards #song-5 {
+    transform: scale(1);
+    opacity: 1;
+    z-index: 10;
+}
+
+#item-5:checked ~ .cards #song-1 {
+    transform: var(--firstLeftCard);
+    opacity: .8;
+    z-index: 9;
+}
+
+#item-5:checked ~ .cards #song-2 {
+    transform: var(--secondLeftCard);
+    opacity: .6;
+    z-index: 8;
+}
+
+#item-5:checked ~ .cards #song-4 {
+    transform: var(--firstRightCard);
+    opacity: .8;
+    z-index: 9;
+}
+
+#item-5:checked ~ .cards #song-3 {
+    transform: var(--secondRightCard);
+    opacity: .6;
+    z-index: 8;
+}

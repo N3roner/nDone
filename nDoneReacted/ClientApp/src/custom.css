@@ -12,3 +12,8 @@ code {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
+
+html, body {
+  background-color: #2f3038;
+  font-family: 'comic sans ms', Helvetica, arial, sans-serif;
+}

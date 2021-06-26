@@ -20,11 +20,11 @@
     text-decoration: none;
     border-radius: 0.4em;
     border-top: 3px solid white;
-    height: 27em;
+    height: 20em;
     box-shadow: -5px 3px 10px #888888;
 }
 
-.dogCardFullView {
+.dogCardFullView {    
     background-color: #393b45;    
     position: relative;
     /* display: inline-block; */
@@ -35,7 +35,7 @@
     margin-bottom: 1.2%;
     text-decoration: none;
     border-radius: 0.4em;  
-    height: 35em;    
+    height: 25em;    
 }
 /* 
 a.dogCard {
@@ -131,13 +131,14 @@ a:hover span:nth-child(4) {
 }
 
 .dogTittle {
-    font-size: larger;
+   
+    /* font-size: larger; */
     font-weight: bold;
     text-align: center;
     margin-top: 0.4em;
 }
 
-img.dogImg {
+/* img.dogImg {
     object-fit: cover;
     position: relative;
     top: 2%;
@@ -145,7 +146,7 @@ img.dogImg {
     width: 96%;
     height: 40%;
     border-radius: 0.4em;
-}
+} */
 
 .dogBot {
     position: absolute;
@@ -157,7 +158,7 @@ img.dogImg {
 
 .dogKupi {
     position: absolute;
-    padding: 0.5em 1em;
+    padding: 0.1em 1em;
     bottom: 2%;
     right: 2%;
     color: white;
@@ -167,7 +168,7 @@ img.dogImg {
 
 
 .dogDostupno {
-    position: absolute;
+    position: absolute;    
     padding: 0.5em 1em;
     bottom: 2%;
     left: 2%;
@@ -176,4 +177,15 @@ img.dogImg {
     font-weight: bold;
     border-bottom-left-radius: 20% 20%;
     border-bottom-right-radius: 50% 20%;
+}
+
+.editorWindowCss{    
+    position: fixed;
+    width: 50%;
+    bottom: 0;
+    z-index: 9;
+    background-color: black;
+    color: white;    
+    border: 1px solid #d3d3d3;
+    text-align: center;
 }

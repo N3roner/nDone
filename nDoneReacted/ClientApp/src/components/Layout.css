@@ -1,0 +1,19 @@
+
+.mainDivClass {
+    background-color: #2f3038;
+    display: flex;
+    flex-direction: row;
+    /* background-color: #232122;
+    background-color: #393b45;*/
+  }
+
+  .dogadjajiDivClass { 
+    position: fixed;
+    top: 3em;
+    left: 8%;
+    width: 84%;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  

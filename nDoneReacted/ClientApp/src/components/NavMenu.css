@@ -1,4 +1,194 @@
-﻿a.navbar-brand {
+﻿:root {
+  /* --mainColor: #0e1c42; */
+  /* --mainColor: #1b3069; */
+  --usualBorderRad: 0.4em;
+  --mainColor: #0e1c42;
+  --firstLeftCard: translatex(-30%) scale(.8);
+  --secondLeftCard: translatex(-65%) scale(.6);
+  --firstRightCard: translatex(30%) scale(.8);
+  --secondRightCard: translatex(65%) scale(.6);
+  --firstToLeft: translatex(-30%) scale(.8);
+}
+
+html, body {
+  background-color: #2f3038;
+  font-family: 'comic sans ms', Helvetica, arial, sans-serif;
+}
+
+.navBarList {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0%;
+  transform: translate(0%, -50%);
+  font-size:medium;
+}
+
+.navLink {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+a.navLink {
+  color: white;
+}
+
+
+.navForm {
+  display: inline-block;
+}
+
+.navFormItem {
+  border-radius: var(--usualBorderRad);
+  background-color: inherit;
+  color: white;
+}
+
+.navSearchField {
+  border-radius: var(--usualBorderRad);
+  background-color: white;
+  width: 5em;
+}
+
+
+
+input.navSearchField {
+  min-width: 5em;
+}
+
+li.navListItem {
+  display: inline-block;
+  color: white;
+}
+
+li.signInButtonRight {
+  float: right;
+  /* font-size: xx-large; */
+  margin-right: 1%;
+  /* width: 48px;
+  height: 48px; */
+}
+
+
+.navLV {
+  position: fixed;
+  top: 0%;
+  left: 5%;
+  width: 90%;
+  height: 2.5em;
+  background-color: var(--mainColor);
+  border-radius: 0 0 1em 1em !important;
+  z-index: 9000;
+  box-shadow: -5px 3px 10px #888888;
+}
+
+#loginBox {
+  padding-top: 0.7em;
+  padding-bottom: 1em;
+  /* font-size: 25px; */
+  display: flex;
+  text-align: center;
+  position: absolute;
+  top: 160%;
+  right: 0;
+  z-index: 9999999999 !important;
+  background-color: var(--mainColor);
+  color: white;
+  border: 0.1em solid black;
+  border-radius: 1em 0em 1em 1em !important;
+  display: none;
+}
+
+.loginBox {
+  text-align: center;
+  transition: ease-in-out, width .35s ease-in-out;
+}
+
+  .loginBox:focus {
+      border-color: #00ff2f;
+      width: 250px;
+      background-color: #00ff2f;
+  }
+
+
+
+.centerLV {
+  
+  position: relative;
+  width: 90%;
+
+  /*left: 7.5%;*/
+  top: 0%;
+  margin-top:4em;
+  margin-left: auto;
+  margin-right: auto;
+  /* position: fixed;    
+  top: 20%;
+  left: 15%;
+  width: 70%;*/
+/*    text-align:start;*/
+
+/*   background-color: #808080;*/
+
+}
+
+.footerLV {  
+  position: fixed;
+  bottom: 0;
+  left: 5%;
+  width: 90%;
+  background-color: var(--mainColor);
+  height: 6em;
+  border-radius: 1em 1em 0 0 !important;
+  z-index: 9000;
+}
+
+.footerCont {
+  text-align: center;
+}
+
+.footerNav {
+  border-radius: 0.5em;
+}
+
+.footerHeader {
+  font-size: larger;
+  color: white;
+  border-radius: 0.2em;
+  border-color: white;
+  text-align: center;
+}
+
+a.footerHeader {
+  color: pink !important;
+  background-color: white;
+}
+
+.footerHeader:hover {
+  cursor: pointer;
+}
+
+.footerDisplayedContent {
+  font-size: large;
+  position: inherit;
+  color: white;
+}
+
+
+.svg {
+  fill: white;
+}
+
+  .svg:hover {
+      cursor: pointer;
+      fill: greenyellow;
+  }
+
+
+
+a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
@@ -6,6 +196,7 @@
 
 html {
   font-size: 14px;
+  color: white;
 }
 @media (min-width: 768px) {
   html {
@@ -15,4 +206,12 @@ html {
 
 .box-shadow {
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.text-Nera {
+  color: white;
+}
+
+.headerTop {
+  color: white;
 }

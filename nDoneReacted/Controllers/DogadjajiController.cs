@@ -24,14 +24,63 @@ namespace nDoneReacted.Controllers
              return View(await _context.Dogadjaji.ToListAsync());
           }*/
       
+       [HttpGet("action"), Route("/API/VrsteDog")]
+      public async Task<JsonResult> Vrste(){
+
+         var vrste =  await _context.VrsteDogadjaja.ToListAsync();
+         
+         foreach (var vrsta in vrste)
+         {
+             Console.WriteLine( vrsta.VrstaId + " n : " + vrsta.Naziv);
+         }
+         var vJson = Json(vrste);
+        //  var jd = Json(dogs);
+         
+         return  Json(vrste);
+      }
+
       [HttpGet("action"), Route("/API/Dogadjaji")]
       public async Task<JsonResult> Index(){
 
          var dogs =  await _context.Dogadjaji.ToListAsync();
          var jd = Json(dogs);
-         
+        
          return  Json(dogs);         
       }
+      [HttpPost]
+      [Route("API/Dogadjaji/AddNewDogadjaj")]
+      // public IActionResult Insert([FromBody] Dogadjaj dog)
+      public async Task<IActionResult> AddNewDogadjaj(string naziv, DateTime datumOdrzavanja, int vrstaDog) {
+         var mera = "poajkspdoka";
+         Dogadjaj dogadjaj = new Dogadjaj();
+         dogadjaj.Naziv = naziv;
+         dogadjaj.DatumOdrzavanja = datumOdrzavanja;
+         dogadjaj.VrstaDogadjaja = new VrsteDogadjaja();
+         dogadjaj.VrstaDogadjaja.VrstaId = vrstaDog;
+
+         if(ModelState.IsValid) {
+            _context.Add(dogadjaj);
+            await _context.SaveChangesAsync();
+            mera += "poakspodk";
+         }
+         return Accepted();
+      }
+
+      [HttpPost]
+        [Route("API/Dogadjaji/Create")]
+        // public IActionResult Insert([FromBody] Dogadjaj dog)
+        public async Task<IActionResult> Create([Bind("Naziv","DatumOdrzavanja","VrstaDogadjaja" )] Dogadjaj dogadjaj)
+        {
+            var mera = "poajkspdoka";
+
+            if (ModelState.IsValid)
+            {
+                _context.Add(dogadjaj);
+                await _context.SaveChangesAsync();
+                mera+= "poakspodk";
+            }
+            return Accepted();
+        }
 
       // GET: Dogadjaji/Details/5
       public async Task<IActionResult> Details(int? id)
@@ -60,18 +109,20 @@ namespace nDoneReacted.Controllers
         // POST: Dogadjaji/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Naziv,DatumOdrzavanja,Slika")] Dogadjaj dogadjaj)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(dogadjaj);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(dogadjaj);
-        }
+
+
+        // [HttpPost]
+        // [ValidateAntiForgeryToken]
+        // public async Task<IActionResult> Create([Bind("Id,Naziv,DatumOdrzavanja,Slika")] Dogadjaj dogadjaj)
+        // {
+        //     if (ModelState.IsValid)
+        //     {
+        //         _context.Add(dogadjaj);
+        //         await _context.SaveChangesAsync();
+        //         return RedirectToAction(nameof(Index));
+        //     }
+        //     return View(dogadjaj);
+        // }
 
         // GET: Dogadjaji/Edit/5
         public async Task<IActionResult> Edit(int? id)

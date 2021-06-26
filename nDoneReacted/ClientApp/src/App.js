@@ -16,16 +16,11 @@ export default class App extends Component {
   render () {
     return (
       
-      <Layout>
-        {/* <ComponentController /> */}
+      <Layout>        
         <Route exact path='/' component={Home} />
         <Route path='/counter' component={Counter} />
         <Route path='/fetch-data' component={FetchData} />
-        <Route path='/dogadjaji' component={EventsController} />
-        {/* <Route path='/dogadjaji' component={EventsController} /> */}
-        {/* <Route path='/dogadjaji' component={nDogadjaji} /> */}
-
-        {/* <Route path='/dogadjaji' component={Dogadjaji} /> */}
+        <Route path='/dogadjaji' component={EventsController} />       
       </Layout>
     );
   }

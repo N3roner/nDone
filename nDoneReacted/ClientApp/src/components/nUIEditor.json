@@ -1,0 +1,14 @@
+{
+    "MainWindowSetings": [
+        {
+            "width": "80",
+            "height": "80",
+            "fontSize": "21",
+            "myPos": { "x":0, "y":0 },
+            "backgroundColor": "#0c225f",
+            "backgroundColorRGBA": "rgba(12,34,95,0.9)",
+            "color": "white"
+        }
+    ]
+  }
+  
